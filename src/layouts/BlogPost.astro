@@ -1,0 +1,36 @@
+---
+
+import BotonMain from '../components/BotonMain.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+<section class="relative h-[1400px] ">
+	<div class="hero-image w-full flex justify-center ">
+		{heroImage && <img class="rounded-3xl mb-4" width={1020} height={510} src={heroImage} alt="" />}
+	</div>
+	<div class="flex flex-col gap-4  justify-between">
+		<h1 class="text-xl font-bold text-center " >{title}</h1>
+		<p>{description}</p>
+	</div>
+	
+	<div class="flex justify-end mt-6">
+		
+	
+	<FormattedDate date={pubDate} />
+		{
+			updatedDate && (
+				<div class="last-updated-on">
+					Last updated on <FormattedDate date={updatedDate} />
+				</div>
+			)
+		}
+		</div>
+	
+		<div class="w-full flex justify-center  absolute bottom-16">
+			<BotonMain title="atras" path='/' />
+		</div>
+
+</section>

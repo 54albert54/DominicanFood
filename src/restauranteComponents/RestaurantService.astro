@@ -1,0 +1,67 @@
+---
+import { imageConfig } from "astro:assets";
+import ServicesCard from "./ServicesCard";
+
+
+export const services = [
+  {
+    title: 'Banquetes',
+    description: "Organiza y prepara banquetes completos para grandes eventos, asegurando la calidad y presentación de cada plato.",
+     href: '#',
+    img: 'https://imgs.search.brave.com/ah9BXX5gJcHuuDeWv4CjdeHogwCiwNGQZqtwQHu6LmY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2UzL2Mx/L2E3L2UzYzFhN2Rk/MDUxMTVhNGM4YjE2/YWY4MDYyMThjMDM1/LmpwZw',  
+  },
+  {
+    title: 'Preparación para Eventos',
+    description: 'Proporciona servicios de catering para bodas, cumpleaños, reuniones corporativas, y otros eventos especiales. Ofrece menús personalizados según las preferencias del cliente y el tipo de evento.',
+    href: '#',
+   img:'https://imgs.search.brave.com/36PeE3Yq_IsHj6dvmy0GFM8JRflCf2hJ-TofeZ5TcW8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93ZWV6/ZXZlbnQuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA0/LzMwMTAyMzUyL2V2/ZW50b3MtY29ycG9y/YXRpdm9zLnBuZw'  
+  },
+  {
+    title: 'Chef a Domicilio',
+    description: 'Ofrece la experiencia de un chef personal que prepare una comida gourmet en casa del cliente, ideal para cenas privadas, aniversarios o cualquier ocasión especial.'
+   ,
+    href: '/servicios',
+    img:'https://imgs.search.brave.com/FolQCOEzj4nA8hvR7XUEhuBTaQkawV85L4zLop52w8o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQx/NTUxOTkxNy9waG90/by9ob3RlbC1jaGVm/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0tWUhuaEpiQWN1/anB0dDZ6V0E2eHhq/RkNiNkhJQV82eUN4/aHdOcjJxakNrPQ'
+  },
+  {
+    title: 'Preparación de Comidas',
+    description: "Proporciona servicios de preparación de comidas semanales o mensuales, donde los clientes pueden recibir comidas preparadas y listas para calentar, ajustadas a sus necesidades dietéticas y preferencias.",
+    href: '/servicios', 
+    img:'https://imgs.search.brave.com/Qx3ZNssvRjGEjFHPL-rbHuZn67zfJiMHQfOMeEoFgs4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjk4/NzkxMTQyL3Bob3Rv/L2x1bmNoLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1yV0JY/YklJRXFNN3RJR24x/cmN2NEJiMGZGek5K/Yy1iRXp4S0lOT2FQ/QWk0PQ'
+  }
+ ,{
+    title: 'Planificación y Decoración de Eventos',
+    description: 'Además del catering, puedes ofrecer servicios de planificación y decoración de eventos, convirtiéndote en una solución integral para eventos.',
+    href: '/servicios',
+    img:"https://imgs.search.brave.com/O9BZdsUcAxn5khHFb1ndQFj2OB0UnQtYFYcwqB0Deu8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy90aGFu/a3NnaXZpbmctY2Vu/dGVycGllY2VzLXBo/b3RvLXBsYWNlY2Fy/ZHMtNjU0MmI2YzAx/Yjk1Mi5qcGc_Y3Jv/cD0wLjY2M3h3OjEu/MDB4aDswLjI1M3h3/LDAmcmVzaXplPTM2/MDoq"
+ }
+ ,{
+    title: 'Menú de Temporada',
+    description:'Ofrece menús especiales durante festividades y temporadas específicas, como menús navideños, menús de acción de gracias, o menús para verano.'
+    ,
+    href: '/servicios',
+    img:"https://imgs.search.brave.com/hLENgcjE2C98VqR6f2U6tO5gREfp9ZsgK4wYETiWhcA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c291dGhlcm5saXZp/bmcuY29tL3RobWIv/X0c3LXRDdVBacE9Z/WHZ3UlpfTGdTTnNU/UkZRPS8xNTAweDAv/ZmlsdGVyczpub191/cHNjYWxlKCk6bWF4/X2J5dGVzKDE1MDAw/MCk6c3RyaXBfaWNj/KCkvZGlubmVycy0y/NTA0NjAxX21vbnRo/XzE2ODIzLTEtNDkw/MzQ1Y2JiNmYwNDc0/YjliNTYwODE1NGIx/YzEzMTkuanBn"
+ }
+
+];
+
+
+---
+
+<section>
+  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header class="text-center">
+      <p class="relative   px-4 py-2 sm:block font-light text-center  md:text-4xl text-2xl   font-semibobold  text-gray-900 ">Servicios</p>
+
+   
+    </header>
+
+    <ul class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
+      {services.map((service) => (
+        <ServicesCard service={service} client:load />
+      ))}
+
+      
+    </ul>
+  </div>
+</section>

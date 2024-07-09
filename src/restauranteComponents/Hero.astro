@@ -1,0 +1,52 @@
+---
+import { allInfoRestaurante } from "./data";
+
+import RestaurantLayout from "../layouts/RestaurantLayout.astro";
+
+const datoHero = allInfoRestaurante.hero;
+---
+<RestaurantLayout title={datoHero.title}>
+<section
+  class={`relative  rounded-2xl shadow-xl h-[550px] sm:h-[480px]  overflow-hidden`}
+>
+  <img
+    class="w-full h-full object-cover object-center"
+    src=`${datoHero.img}`
+    alt=""
+  />
+  <div class="w-full h-full absolute inset-0 bg-white/70 backdrop-blur-sm">
+  </div>
+
+  <div
+    class="absolute top-0 flex flex-col-reverse sm:flex-row   justify-center mx-auto max-w-screen-xl py-10 sm:py-20 lg:flex lg:h-screen"
+  >
+    <div
+      class="sm:w-1/2 bg-red-00  text-center ltr:sm:text-left rtl:sm:text-right"
+    >
+      
+      <h1 class="text-3xl font-extrabold sm:text-5xl text-azul-bandera">
+        {datoHero.title}
+
+        <spam class="block font-extrabold text-rojo-bandera text-5xl">
+          {datoHero.title2}.
+        </spam>
+      </h1>
+
+      <p class="mt-4 mx-8 max-w-lg sm:text-xl/relaxed text-center sm:text-left ">
+        {datoHero.description}
+      </p>
+    </div>
+    <div class="sm:w-1/2 px-6 mb-6 relative">
+      <img src={datoHero.img} alt="" />
+      <img class="absolute right-2 -top-20 opacity-30" src="public/BrandLogo-removebg.png" alt="">
+    </div>
+  </div>
+</section>
+</RestaurantLayout>
+<style>
+  .gradient-text {
+    background: linear-gradient(0deg, #002d62, #d0021b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

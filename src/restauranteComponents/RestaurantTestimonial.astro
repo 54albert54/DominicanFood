@@ -1,0 +1,46 @@
+---
+
+const dataTestimonial = {
+  title: 'Gracias por Preferir Nuestra Comida',
+  description: 'Elegirnos significa optar por calidad, profesionalismo, y un servicio inigualable. Estamos listos para cumplir con todas tus demandas y superar tus expectativas. ¡Confía en nosotros para todas tus necesidades culinarias y disfruta de una experiencia gastronómica única!',
+  img: 'https://imgs.search.brave.com/GQxcpY-2gMpl0RYJMnMLIgDXDiHmEuomlvyKIRgltv8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/OTAyODk4NC9waG90/by9yZXN0YXVyYW50/LWNoZWYtcHJlcGFy/aW5nLWEtZGlzaC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/NkZ0SVJtNjh1UzdM/NDJDV2pGa2VkcUtH/LTA0Y3ZzTVVyQXN3/Y05PakwyND0',
+}
+
+---
+
+<section>
+  <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:h-full lg:grid-cols-2">
+      <div class="relative z-10 lg:py-16">
+        <div class="relative h-80 sm:h-80 lg:h-[480px]">
+          <img
+            alt=""
+            src={dataTestimonial.img}
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="sm:absolute right-10   flex z-0 sm:w-[620px]  lg:h-[580px] bg-rojo-bandera rounded-xl border-4 border-rojo-bandera">
+        <div class="w-full h-full bg-white rounded-xl border-4 border-white">
+          <div class="w-full h-full bg-[#f2f2f2] rounded-xl border-4 border-azul-bandera px-4 pt-6 ">
+      
+
+        <div class="p-8 sm:p-16 ">
+
+          <h2 class="text-2xl text-center font-bold sm:text-3xl">
+            
+            {dataTestimonial.title}
+          </h2>
+
+          <p class="mt-4 text-gray-600">
+            {dataTestimonial.description}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+</section>

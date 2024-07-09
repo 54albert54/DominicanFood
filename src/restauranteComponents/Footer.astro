@@ -1,0 +1,124 @@
+---
+const today = new Date();
+import {dataFooter} from '../components/data/footerData'
+import IconMedia from '../components/data/IconMedia.astro';
+
+
+
+---
+
+<section class="bg-azul-bandera w-full min-h-[300px] flex flex-col items-center text-[#1b1b1b]">
+
+ 
+  <div class="social-links flex w-full flex-col  sm:flex-row gap-10 text-white  justify-between items-center ">
+
+    <a
+		class="social-links flex flex-row "
+    href={dataFooter.location.href}
+		target="_blank"
+  >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-Width="2"
+      stroke-Linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path><path
+        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+      ></path></svg
+    >
+    <p class="capitalize ">
+			{dataFooter.location.title}
+			<br>
+      <span class=" text-sm font-light">{dataFooter.location.description ?? dataFooter.location.description}.</span>
+
+    </p>
+	</a>
+  <section class="flex flex-row gap-5 items-center  relative   justify-center">
+		{dataFooter.socialMedia.map(icon => (
+      <a href={icon.link} target="_blank" rel="noopener noreferrer">
+        <IconMedia name={icon.name} class="icon" />
+      </a>
+    ))}
+</section>
+
+
+    <div>
+
+   
+	
+
+</div>
+    <section class="ml-6  h-20 " >
+      <p class="text-xl font-bold text-center relative my-0 ">whatsapp</p>
+      <div class="text-green-600 flex sm:flex-col h-12 pb-3  ">
+			{
+				dataFooter.phones.map((phone) => (
+					
+				<a
+        class="flex flex-row gap-1 justify-center  sm:h-10 m-4"
+        href={`https://wa.me/${phone.numberTolink}?text=Hola%20este%20es%20un%20mensaje%20predefinido%20por%20mi%20web`}
+        target="_blank"
+      >
+        <span class="sr-only">Send a messge in whatsapp</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-Width="2"
+          stroke-Linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path><path
+            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+          ></path></svg>
+        <p class="relative bottom-[3px]">{phone.numberToShow}</p>
+      </a>
+				))
+			}
+     </div>
+
+    </section>
+  </div>
+  
+  
+<div class="flex flex-row justify-center max-w-[1080px] pt-4 mx-auto  text-[#c6c8c6bb]">
+
+	<p class="mt-8 text-sm font-light">
+		&copy; {today.getFullYear()} Alberto B. All rights reserved.
+	</p>
+	</div>
+
+</section>
+
+
+
+<style>
+  footer {
+    padding: 2em 1em 6em 1em;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    color: rgb(var(--gray));
+    text-align: center;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  .social-links a:hover {
+    color: rgb(var(--gray-dark));
+  }
+</style>

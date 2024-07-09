@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import GlobalLayouts from '../layouts/GlobalLayouts.astro'
+import RestaurantTestimonial from '../restauranteComponents/RestaurantTestimonial.astro';
+import RestaurantService from '../restauranteComponents/RestaurantService.astro';
+
+import CarruselRestaurante from '../restauranteComponents/CarruselRestaurant'
+import Hero from '../restauranteComponents/Hero.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<GlobalLayouts title="Phone Store">
+		<Hero/>
+		
+		<CarruselRestaurante client:load />
+		<RestaurantService />
+		
+		<RestaurantTestimonial />
+		
+	</GlobalLayouts>
+	
+</html>

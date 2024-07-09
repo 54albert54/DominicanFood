@@ -1,0 +1,32 @@
+---
+
+import GlobalLayouts from '../layouts/GlobalLayouts.astro';
+import { dataAbout } from '../components/data/aboutData'
+
+---
+<GlobalLayouts title="Phone Store">
+
+<div class="container mx-auto h-sccreen px-4 py-8">
+	
+	<div class="w-[80%] h-[300px] mx-auto  flex items-center justify-center bg-rojo-bandera rounded-xl mb-16 shadow-xl">
+		<img class="  object-cover  rounded-xl "
+		 src={dataAbout.img}
+ alt="">
+
+	</div>
+	<p class="text-xl text-center font-bold mb-6 sm:mx-28">{dataAbout.title}</p>
+	<div class="w-[80%] mx-auto ">
+		{
+			dataAbout.description.map((about) => {
+				const data = about.split(':')
+			return(
+			<p class="text-lg mb-6">	<strong>{data[0]}:</strong> {data[1]}	</p>
+			)})
+		}
+	
+
+</div>
+</div>
+
+
+</GlobalLayouts>
