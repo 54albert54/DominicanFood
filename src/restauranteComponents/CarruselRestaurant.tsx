@@ -36,7 +36,7 @@ const ShowAllOfferts = () => {
 
             <div className="-mt-20 md:mt-8">
               <a
-                href={`/ofertas/${data.slug}`}
+                href={`/menu`}
                 className="inline-block rounded-lg bg-rojo-bandera px-5 py-3 text-sm font-medium text-white  transition hover:shadow-xl hover:bg-rojo-bandera/75"
               >
                 Ver menu

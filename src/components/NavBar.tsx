@@ -60,8 +60,8 @@ const NavBar = () => {
         <div className="relative" onClick={() => setShowMenu(!showMenu)}>
           {/* Hamburger menu */}
           <div
-            className={` sm:hidden p-2 rounded-lg ${
-              showMenu ? "bg-red-400/60 shadow-red-400 shadow-sm " : ""
+            className={` sm:hidden p-2 rounded-lg transition-all ease-in-out duration-500 ${
+              showMenu ? "bg-rojo-bandera shadow-red-400 shadow-sm text-white" : ""
             } `}
           >
             <MenuIcon />
@@ -69,13 +69,16 @@ const NavBar = () => {
         </div>
       </nav>
       {/* Mobile menu */}
-      {showMenu && (
-        <section className="fixed top-16 left-0 sm:hidden  z-50 bg-slate-200 w-screen h-screen flex flex-col gap-y-4 items-center pt-10">
+      
+        <section className={`${showMenu ? "" : "translate-x-[645px]"} transition-all ease-in-out duration-700  fixed top-16  left-0 sm:hidden  z-50 bg-slate-100 w-screen  h-screen flex flex-col gap-y-4 items-center pt-10`}>
+          <img 
+          className="absolute object-cover top-[-5px] left-[-2px] w-full h-full z-0 opacity-55" 
+          src="https://imgs.search.brave.com/y5w_OtS6NkUCyKbiPvtl1R8aLGvkrvUmRCdCjHj4qCY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/LnVuc3BsYXNoLmNv/bS9wcmVtaXVtX3Bo/b3RvLTE2NzYzMTAw/NTUzMTYtZDczYzlk/NWVlYjUxP2ZtPWpw/ZyZ3PTMwMDAmYXV0/bz1mb3JtYXQmZml0/PWNyb3AmcT02MCZp/eGxpYj1yYi00LjAu/MyZpeGlkPU0zd3hN/akEzZkRCOE1IeHpa/V0Z5WTJoOE5YeDhj/bVZ6ZEdGMWNtRnVk/SE44Wlc1OE1IeDhN/SHg4ZkRBPQ" alt="" />
           {allMenus.map((menu) => {
             return (
               <div
                 key={menu.id}
-                className="text-4xl w-3/4 h-16 flex  items-center justify-start  rounded-md bg-slate-300/80 font-normal shadow-slate-400 shadow-sm "
+                className=" flex relative z-10 justify-center items-center rounded-lg bg-rojo-bandera  px-5 py-3 text-lg font-medium text-white  transition hover:shadow-xl hover:bg-rojo-bandera/75 "
               >
                 <NavBarLinks
                   href={menu.path}
@@ -87,7 +90,7 @@ const NavBar = () => {
             );
           })}
         </section>
-      )}
+      
     </header>
   );
 };
@@ -101,13 +104,13 @@ type NavBarLinksProps = {
 };
 const NavBarLinks = ({ href, active, children }: NavBarLinksProps) => {
   return (
-    <div className="flex pl-4 sm:pl-0 sm:items-center flex-col gap-x-2 w-[220px]   sm:w-[100px]">
+    <div className="flex pl-4 sm:pl-0 sm:items-center flex-col gap-x-2 w-[220px]   sm:w-[80px]">
       <a href={href} className={`inline-block no-underline  capitalize `}>
         {children}
       </a>
       <span
         className={` ${
-          active ? "bg-rojo-bandera/60 w-full" : "w-3"
+          active ? "bg-white sm:bg-rojo-bandera w-[120px] sm:w-[80px]" : "w-3"
         } mt-2  h-2 rounded-full transition-all ease-out duration-200`}
       ></span>
     </div>

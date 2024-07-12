@@ -13,12 +13,12 @@ const ShowItems = () => {
     </div> */}
     
     
-    <section className="relative z-10 bg-blue-200/20 rounded-2xl flex flex-wrap justify-start gap-4 p-4 w-full sm:px-28">
+    <section className="relative z-10 rounded-2xl flex flex-wrap justify-start gap-4 p-4 w-full sm:px-28">
       {Array.from(onlyCategory).map((category) => {
         const filteredMenu = AllMenus.filter((item) => item.categoryLabel === category);
         return (
           <section key={category} className="w-[430px] sm:w-full ">
-            <div className="bg-slate-100 p-4 rounded-2xl h-full">
+            <div className="bg-slate-100 shadow-2xl border bottom-[8px] border-azul-bandera p-4 rounded-2xl h-full">
               <p id={category} className="font-bold text-2xl bg-slate-100 h-[74px] pt-6 text-center sticky top-16">{category}</p>
               <MenuForCategory filteredMenu={filteredMenu} />
             </div>
