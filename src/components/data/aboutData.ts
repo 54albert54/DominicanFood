@@ -1,7 +1,7 @@
 export const dataAbout = {
   title: "Elegirnos para tus necesidades culinarias siempre es una excelente idea porque estamos preparados para satisfacer todas tus demandas con los mejores servicios.",
 
-  img: "public/BrandLogo-removebg.png",
+  img: "/BrandLogo-removebg.png",
   description: [
     "Versatilidad y Personalización: Ofrecemos una amplia gama de servicios que se pueden personalizar según tus preferencias y necesidades. Ya sea catering para eventos, clases de cocina, o chef a domicilio, adaptamos nuestras ofertas para asegurarnos de que recibas exactamente lo que deseas",
     "Calidad y Frescura: Utilizamos solo los ingredientes más frescos y de la más alta calidad en todas nuestras preparaciones. Nos comprometemos a entregar platos deliciosos y nutritivos que deleitarán tus sentidos.",

@@ -38,15 +38,17 @@ export default ShowItems;
 const MenuForCategory = ({ filteredMenu }: { filteredMenu: MenuItem[] }) => {
   return (
     <div className="rounded-2x">
-      {filteredMenu.map((element, ind) => (
+      {filteredMenu.map((element, ind) =>{ 
+        const addCentis = (element.price * 100/100).toFixed(2)
+        return(
         <div key={ind} className="border border-transparent my-4 border-b-black/40">
           <div className="flex justify-between font-serif">
             <p>{element.name}</p>
-            <p>${element.price}</p>
+            <p>${addCentis}</p>
           </div>
           <p className="text-sm font-light">{element.description}</p>
         </div>
-      ))}
+      )})}
     </div>
   );
 };

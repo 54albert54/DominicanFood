@@ -2,7 +2,7 @@
 
 import GlobalLayouts from '../../layouts/GlobalLayouts.astro';
 import  { dataOffer } from '../../components/data/offferData'
-import ShowAllBanner from '../../components/ShowAllBanner.astro';
+
 
 const posts = dataOffer.sort(
 	(a, b) => a.pubDate.valueOf() - b.pubDate.valueOf()
@@ -11,7 +11,7 @@ const posts = dataOffer.sort(
 ---
 
 		<GlobalLayouts title="Restaurante La tia">
-	  <ShowAllBanner posts={posts} path="ofertas" />
+
 
 		</GlobalLayouts>
 		
