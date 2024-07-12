@@ -15,16 +15,23 @@ const posts = services
 		
 
 	
-		<GlobalLayouts title="Phone Store">
+		<GlobalLayouts title="Restaurante La tia">
 			<section class="py-10">
 				<div class="flex flex-wrap justify-center items-center gap-10 ">
 					{
 						posts.map(({title , description , img}) => (
-							<div class="w-[360px] ">
-							<h2 class="text-3xl text-center mb-4">{title}</h2>
-							<p class="text-center ">{description}</p>
-
-							<img class="w-[300px] h-[250px] mx-auto rounded-xl shadow-2xl" src={img} alt="" />
+							<div class="w-[380px] h-[240px] gap-x-3 flex  shadow-xl rounded-3xl">
+								<div class="w-1/2 py-4 ml-3">
+									<img class="w-full h-full object-cover rounded-xl " src={img} alt="" />
+								</div>
+								<div class="w-1/2 py-4 pr-1">
+							<h2 class="text-xl text-center mb-4 font-semibold">{title}</h2>
+							<div class="overflow-scroll h-[120px]">
+								<p class=" font-light text-sm text-left ">{description}</p>
+							</div>
+						
+						</div>
+							
 						</div>
 						))
 					}

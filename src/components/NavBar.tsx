@@ -38,7 +38,7 @@ const NavBar = () => {
           <a href="/" className="flex items-center ">
             <img
               className=" top-[-5px] left-[-2px] w-28 h-28"
-              src="NavbarLogo-removebg.png"
+              src="/NavbarLogo-removebg.png"
               alt=""
             />
           </a>

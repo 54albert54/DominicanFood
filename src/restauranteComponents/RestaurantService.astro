@@ -57,11 +57,14 @@ export const services = [
     </header>
 
     <ul class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
-      {services.map((service) => (
+      {services.slice(0, 3).map((service) => (
         <ServicesCard service={service} client:load />
       ))}
 
       
     </ul>
+    <div class="w-full flex justify-center">
+    <a class="inline-block rounded-lg bg-rojo-bandera px-5 py-3 text-sm font-medium text-white  transition hover:shadow-xl hover:bg-rojo-bandera/75" href="/servicios">Ver mas Servicios</a>
+  </div>
   </div>
 </section>
